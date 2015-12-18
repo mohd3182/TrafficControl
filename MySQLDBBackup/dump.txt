@@ -1,0 +1,434 @@
+-- MySQL dump 10.13  Distrib 5.1.51, for Win32 (ia32)
+--
+-- Host: localhost    Database: mydb
+-- ------------------------------------------------------
+-- Server version	5.1.51-community
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `lessons_schedule`
+--
+
+DROP TABLE IF EXISTS `lessons_schedule`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `lessons_schedule` (
+  `CLASS_ID` int(11) NOT NULL,
+  `SESSION_ID` int(11) NOT NULL,
+  `APPLIED_FROM` date NOT NULL,
+  `APPLIED_TO` date NOT NULL,
+  `WEEK_DAY` int(11) NOT NULL,
+  `SESSION_START_HR` int(11) DEFAULT NULL,
+  `SESSION_END_HR` int(11) DEFAULT NULL,
+  `LESSON_ID` int(11) DEFAULT NULL,
+  `TEACHER_ID` varchar(20) DEFAULT NULL,
+  `SESSION_START_MN` int(11) DEFAULT NULL,
+  `SESSION_END_MN` int(11) DEFAULT NULL,
+  PRIMARY KEY (`CLASS_ID`,`SESSION_ID`,`APPLIED_FROM`,`APPLIED_TO`,`WEEK_DAY`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `lessons_schedule`
+--
+
+LOCK TABLES `lessons_schedule` WRITE;
+/*!40000 ALTER TABLE `lessons_schedule` DISABLE KEYS */;
+INSERT INTO `lessons_schedule` VALUES (48,45,'2012-07-01','2012-07-31',38,8,8,51,'231232',5,40),(48,45,'2012-07-01','2012-07-31',39,0,0,0,'',0,0),(48,45,'2012-07-01','2012-07-31',40,0,0,0,'',0,0),(48,45,'2012-07-01','2012-07-31',41,0,0,0,'',0,0),(48,45,'2012-07-01','2012-07-31',42,0,0,0,'',0,0),(48,45,'2012-07-01','2012-07-31',43,0,0,0,'',0,0),(48,45,'2012-07-01','2012-07-31',44,0,0,0,'',0,0),(48,45,'2013-01-01','2013-03-31',38,8,8,50,'TR001',5,30),(48,45,'2013-01-01','2013-03-31',39,8,8,50,'21312312',0,30),(48,45,'2013-01-01','2013-03-31',40,8,8,50,'312321312',0,30),(48,45,'2013-01-01','2013-03-31',41,8,9,51,'231232',0,0),(48,45,'2013-01-01','2013-03-31',42,8,8,51,'312321312',0,40),(48,45,'2013-01-01','2013-03-31',43,0,0,0,'',0,0),(48,45,'2013-01-01','2013-03-31',44,0,0,0,'',0,0),(48,45,'2013-04-01','2013-06-30',38,9,9,51,'2212',0,30),(48,45,'2013-04-01','2013-06-30',39,9,9,0,'',5,30),(48,45,'2013-04-01','2013-06-30',40,0,0,0,'',0,0),(48,45,'2013-04-01','2013-06-30',41,0,0,0,'',0,0),(48,45,'2013-04-01','2013-06-30',42,0,0,0,'',0,0),(48,45,'2013-04-01','2013-06-30',43,0,0,0,'',0,0),(48,45,'2013-04-01','2013-06-30',44,0,0,0,'',0,0),(48,45,'2013-07-01','2013-07-31',38,2,3,51,'122233',0,0),(48,45,'2013-07-01','2013-07-31',39,0,0,0,'',0,0),(48,45,'2013-07-01','2013-07-31',40,0,0,0,'',0,0),(48,45,'2013-07-01','2013-07-31',41,0,0,0,'',0,0),(48,45,'2013-07-01','2013-07-31',42,0,0,0,'',0,0),(48,45,'2013-07-01','2013-07-31',43,0,0,0,'',0,0),(48,45,'2013-07-01','2013-07-31',44,0,0,0,'',0,0),(48,46,'2012-07-01','2012-07-31',38,8,9,51,'2333212',45,10),(48,46,'2012-07-01','2012-07-31',39,0,0,0,'',0,0),(48,46,'2012-07-01','2012-07-31',40,0,0,0,'',0,0),(48,46,'2012-07-01','2012-07-31',41,0,0,0,'',0,0),(48,46,'2012-07-01','2012-07-31',42,0,0,0,'',0,0),(48,46,'2012-07-01','2012-07-31',43,0,0,0,'',0,0),(48,46,'2012-07-01','2012-07-31',44,0,0,0,'',0,0),(48,46,'2013-01-01','2013-03-31',38,8,9,51,'eqwe',31,0),(48,46,'2013-01-01','2013-03-31',39,8,9,51,'2212',31,0),(48,46,'2013-01-01','2013-03-31',40,8,9,51,'2313123',31,0),(48,46,'2013-01-01','2013-03-31',41,9,10,50,'2212',1,0),(48,46,'2013-01-01','2013-03-31',42,9,9,51,'3123213',0,40),(48,46,'2013-01-01','2013-03-31',43,0,0,0,'',0,0),(48,46,'2013-01-01','2013-03-31',44,0,0,0,'',0,0),(48,46,'2013-04-01','2013-06-30',38,9,10,51,'312321312',31,0),(48,46,'2013-04-01','2013-06-30',39,9,10,50,'2333212',31,0),(48,46,'2013-04-01','2013-06-30',40,0,0,0,'',0,0),(48,46,'2013-04-01','2013-06-30',41,0,0,0,'',0,0),(48,46,'2013-04-01','2013-06-30',42,0,0,0,'',0,0),(48,46,'2013-04-01','2013-06-30',43,0,0,0,'',0,0),(48,46,'2013-04-01','2013-06-30',44,0,0,0,'',0,0),(48,46,'2013-07-01','2013-07-31',38,3,4,50,'2313123',1,0),(48,46,'2013-07-01','2013-07-31',39,0,0,0,'',0,0),(48,46,'2013-07-01','2013-07-31',40,0,0,0,'',0,0),(48,46,'2013-07-01','2013-07-31',41,0,0,0,'',0,0),(48,46,'2013-07-01','2013-07-31',42,0,0,0,'',0,0),(48,46,'2013-07-01','2013-07-31',43,0,0,0,'',0,0),(48,46,'2013-07-01','2013-07-31',44,0,0,0,'',0,0),(48,47,'2012-07-01','2012-07-31',38,0,0,0,'',0,0),(48,47,'2012-07-01','2012-07-31',39,0,0,0,'',0,0),(48,47,'2012-07-01','2012-07-31',40,0,0,0,'',0,0),(48,47,'2012-07-01','2012-07-31',41,0,0,0,'',0,0),(48,47,'2012-07-01','2012-07-31',42,0,0,0,'',0,0),(48,47,'2012-07-01','2012-07-31',43,0,0,0,'',0,0),(48,47,'2012-07-01','2012-07-31',44,0,0,0,'',0,0),(48,47,'2013-01-01','2013-03-31',38,9,9,50,'2333212',1,30),(48,47,'2013-01-01','2013-03-31',39,9,9,51,'3123213',1,30),(48,47,'2013-01-01','2013-03-31',40,9,9,51,'213273',1,30),(48,47,'2013-01-01','2013-03-31',41,10,11,51,'3213123',1,0),(48,47,'2013-01-01','2013-03-31',42,10,10,50,'312321312',0,30),(48,47,'2013-01-01','2013-03-31',43,0,0,0,'',0,0),(48,47,'2013-01-01','2013-03-31',44,0,0,0,'',0,0),(48,47,'2013-04-01','2013-06-30',38,10,10,50,'123213',1,30),(48,47,'2013-04-01','2013-06-30',39,10,10,51,'2313123',1,30),(48,47,'2013-04-01','2013-06-30',40,0,0,0,'',0,0),(48,47,'2013-04-01','2013-06-30',41,0,0,0,'',0,0),(48,47,'2013-04-01','2013-06-30',42,0,0,0,'',0,0),(48,47,'2013-04-01','2013-06-30',43,0,0,0,'',0,0),(48,47,'2013-04-01','2013-06-30',44,0,0,0,'',0,0),(48,47,'2013-07-01','2013-07-31',38,0,0,0,'',0,0),(48,47,'2013-07-01','2013-07-31',39,0,0,0,'',0,0),(48,47,'2013-07-01','2013-07-31',40,0,0,0,'',0,0),(48,47,'2013-07-01','2013-07-31',41,0,0,0,'',0,0),(48,47,'2013-07-01','2013-07-31',42,0,0,0,'',0,0),(48,47,'2013-07-01','2013-07-31',43,0,0,0,'',0,0),(48,47,'2013-07-01','2013-07-31',44,0,0,0,'',0,0),(48,52,'2012-07-01','2012-07-31',38,0,0,0,'',0,0),(48,52,'2012-07-01','2012-07-31',39,0,0,0,'',0,0),(48,52,'2012-07-01','2012-07-31',40,0,0,0,'',0,0),(48,52,'2012-07-01','2012-07-31',41,0,0,0,'',0,0),(48,52,'2012-07-01','2012-07-31',42,0,0,0,'',0,0),(48,52,'2012-07-01','2012-07-31',43,0,0,0,'',0,0),(48,52,'2012-07-01','2012-07-31',44,0,0,0,'',0,0),(48,52,'2013-01-01','2013-03-31',38,0,0,0,'',0,0),(48,52,'2013-01-01','2013-03-31',39,0,0,0,'',0,0),(48,52,'2013-01-01','2013-03-31',40,0,0,0,'',0,0),(48,52,'2013-01-01','2013-03-31',41,0,0,0,'',0,0),(48,52,'2013-01-01','2013-03-31',42,0,0,0,'',0,0),(48,52,'2013-01-01','2013-03-31',43,0,0,0,'',0,0),(48,52,'2013-01-01','2013-03-31',44,0,0,0,'',0,0),(48,52,'2013-04-01','2013-06-30',38,10,11,50,'2313123',31,0),(48,52,'2013-04-01','2013-06-30',39,10,11,50,'312321312',31,0),(48,52,'2013-04-01','2013-06-30',40,0,0,0,'',0,0),(48,52,'2013-04-01','2013-06-30',41,0,0,0,'',0,0),(48,52,'2013-04-01','2013-06-30',42,0,0,0,'',0,0),(48,52,'2013-04-01','2013-06-30',43,0,0,0,'',0,0),(48,52,'2013-04-01','2013-06-30',44,0,0,0,'',0,0),(48,52,'2013-07-01','2013-07-31',38,0,0,0,'',0,0),(48,52,'2013-07-01','2013-07-31',39,0,0,0,'',0,0),(48,52,'2013-07-01','2013-07-31',40,0,0,0,'',0,0),(48,52,'2013-07-01','2013-07-31',41,0,0,0,'',0,0),(48,52,'2013-07-01','2013-07-31',42,0,0,0,'',0,0),(48,52,'2013-07-01','2013-07-31',43,0,0,0,'',0,0),(48,52,'2013-07-01','2013-07-31',44,0,0,0,'',0,0),(49,45,'2011-07-01','2011-07-30',38,8,8,51,'213273',9,50),(49,45,'2011-07-01','2011-07-30',39,0,0,0,'',0,0),(49,45,'2011-07-01','2011-07-30',40,0,0,0,'',0,0),(49,45,'2011-07-01','2011-07-30',41,0,0,0,'',0,0),(49,45,'2011-07-01','2011-07-30',42,0,0,0,'',0,0),(49,45,'2011-07-01','2011-07-30',43,0,0,0,'',0,0),(49,45,'2011-07-01','2011-07-30',44,0,0,0,'',0,0),(49,45,'2013-07-01','2013-07-31',38,2,3,50,'2131312',0,0),(49,45,'2013-07-01','2013-07-31',39,0,0,0,'',0,0),(49,45,'2013-07-01','2013-07-31',40,0,0,0,'',0,0),(49,45,'2013-07-01','2013-07-31',41,0,0,0,'',0,0),(49,45,'2013-07-01','2013-07-31',42,0,0,0,'',0,0),(49,45,'2013-07-01','2013-07-31',43,0,0,0,'',0,0),(49,45,'2013-07-01','2013-07-31',44,0,0,0,'',0,0),(49,46,'2011-07-01','2011-07-30',38,8,10,50,'21312312',55,0),(49,46,'2011-07-01','2011-07-30',39,0,0,0,'',0,0),(49,46,'2011-07-01','2011-07-30',40,0,0,0,'',0,0),(49,46,'2011-07-01','2011-07-30',41,0,0,0,'',0,0),(49,46,'2011-07-01','2011-07-30',42,0,0,0,'',0,0),(49,46,'2011-07-01','2011-07-30',43,0,0,0,'',0,0),(49,46,'2011-07-01','2011-07-30',44,0,0,0,'',0,0),(49,46,'2013-07-01','2013-07-31',38,3,4,51,'2333212',5,0),(49,46,'2013-07-01','2013-07-31',39,0,0,0,'',0,0),(49,46,'2013-07-01','2013-07-31',40,0,0,0,'',0,0),(49,46,'2013-07-01','2013-07-31',41,0,0,0,'',0,0),(49,46,'2013-07-01','2013-07-31',42,0,0,0,'',0,0),(49,46,'2013-07-01','2013-07-31',43,0,0,0,'',0,0),(49,46,'2013-07-01','2013-07-31',44,0,0,0,'',0,0),(49,47,'2011-07-01','2011-07-30',38,0,0,0,'',0,0),(49,47,'2011-07-01','2011-07-30',39,0,0,0,'',0,0),(49,47,'2011-07-01','2011-07-30',40,0,0,0,'',0,0),(49,47,'2011-07-01','2011-07-30',41,0,0,0,'',0,0),(49,47,'2011-07-01','2011-07-30',42,0,0,0,'',0,0),(49,47,'2011-07-01','2011-07-30',43,0,0,0,'',0,0),(49,47,'2011-07-01','2011-07-30',44,0,0,0,'',0,0),(49,47,'2013-07-01','2013-07-31',38,0,0,0,'',0,0),(49,47,'2013-07-01','2013-07-31',39,0,0,0,'',0,0),(49,47,'2013-07-01','2013-07-31',40,0,0,0,'',0,0),(49,47,'2013-07-01','2013-07-31',41,0,0,0,'',0,0),(49,47,'2013-07-01','2013-07-31',42,0,0,0,'',0,0),(49,47,'2013-07-01','2013-07-31',43,0,0,0,'',0,0),(49,47,'2013-07-01','2013-07-31',44,0,0,0,'',0,0),(49,52,'2011-07-01','2011-07-30',38,0,0,0,'',0,0),(49,52,'2011-07-01','2011-07-30',39,0,0,0,'',0,0),(49,52,'2011-07-01','2011-07-30',40,0,0,0,'',0,0),(49,52,'2011-07-01','2011-07-30',41,0,0,0,'',0,0),(49,52,'2011-07-01','2011-07-30',42,0,0,0,'',0,0),(49,52,'2011-07-01','2011-07-30',43,0,0,0,'',0,0),(49,52,'2011-07-01','2011-07-30',44,0,0,0,'',0,0),(49,52,'2013-07-01','2013-07-31',38,0,0,0,'',0,0),(49,52,'2013-07-01','2013-07-31',39,0,0,0,'',0,0),(49,52,'2013-07-01','2013-07-31',40,0,0,0,'',0,0),(49,52,'2013-07-01','2013-07-31',41,0,0,0,'',0,0),(49,52,'2013-07-01','2013-07-31',42,0,0,0,'',0,0),(49,52,'2013-07-01','2013-07-31',43,0,0,0,'',0,0),(49,52,'2013-07-01','2013-07-31',44,0,0,0,'',0,0);
+/*!40000 ALTER TABLE `lessons_schedule` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `master_codes`
+--
+
+DROP TABLE IF EXISTS `master_codes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `master_codes` (
+  `MASTER_CODE_ID` int(11) NOT NULL,
+  `MASTER_CODE_DESCRIPTION` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`MASTER_CODE_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `master_codes`
+--
+
+LOCK TABLES `master_codes` WRITE;
+/*!40000 ALTER TABLE `master_codes` DISABLE KEYS */;
+INSERT INTO `master_codes` VALUES (1,'Titles'),(2,'Machines'),(3,'Centers'),(4,'Gender'),(5,'Student Type'),(6,'Blood Group'),(7,'City'),(8,'Job'),(9,'Student Status'),(10,'Accomdation Type'),(11,'Relation'),(12,'Week Days'),(13,'Lessons'),(14,'Sessions'),(15,'Classes'),(16,'Visit Reason');
+/*!40000 ALTER TABLE `master_codes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `master_codes_details`
+--
+
+DROP TABLE IF EXISTS `master_codes_details`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `master_codes_details` (
+  `CODE_ID` int(11) NOT NULL,
+  `MASTER_CODE_ID` int(11) NOT NULL,
+  `CODE_DESCRIPTION` varchar(75) DEFAULT NULL,
+  PRIMARY KEY (`CODE_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `master_codes_details`
+--
+
+LOCK TABLES `master_codes_details` WRITE;
+/*!40000 ALTER TABLE `master_codes_details` DISABLE KEYS */;
+INSERT INTO `master_codes_details` VALUES (1,1,'Müdür'),(2,1,'Güvenlik'),(3,1,'Teacher'),(4,2,'KucukCekmece'),(5,2,'Machine2'),(6,2,'Machine3'),(7,1,'öğretmen'),(8,1,'Genel Müdür'),(9,2,'Avcilar'),(10,2,'Kabataş'),(11,3,'Merkez 1'),(12,3,'Merkez 2'),(13,6,'A (+)'),(14,6,'A (-)'),(15,6,'B (+)'),(16,6,'B (-)'),(17,4,'Male'),(18,4,'Female'),(19,5,'Prim'),(20,5,'Secon.'),(21,7,'Ankara'),(22,7,'Istanbul'),(23,8,'Job1'),(24,8,'Job2'),(25,9,'Active'),(26,9,'Inactive'),(27,10,'Self'),(28,10,'with mother'),(29,10,'with father'),(30,10,'with both parents'),(31,10,'with sister'),(32,10,'with uncle'),(33,11,'Papa'),(34,11,'his Mother'),(35,11,'Brother'),(36,11,'Sister'),(37,11,'Grandpa'),(38,12,'Monday'),(39,12,'Tuesday'),(40,12,'Wednesday'),(41,12,'Thursday'),(42,12,'Friday'),(43,12,'Saturday'),(44,12,'Sunday'),(45,14,'Session (1)'),(46,14,'Session (2)'),(47,14,'Session (3)'),(48,15,'Class A'),(49,15,'Class B'),(50,13,'Music'),(51,13,'Computer'),(52,14,'Session (4)'),(53,16,'Student Visit'),(54,16,'Review'),(55,16,'for Lirbrary');
+/*!40000 ALTER TABLE `master_codes_details` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sct_user_data`
+--
+
+DROP TABLE IF EXISTS `sct_user_data`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sct_user_data` (
+  `USER_ID` varchar(30) NOT NULL,
+  `USER_PW` varchar(30) NOT NULL,
+  `USER_EXPIERY` date DEFAULT NULL,
+  `USER_CREATION` date DEFAULT NULL,
+  `USER_STATUS` char(1) DEFAULT NULL,
+  PRIMARY KEY (`USER_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sct_user_data`
+--
+
+LOCK TABLES `sct_user_data` WRITE;
+/*!40000 ALTER TABLE `sct_user_data` DISABLE KEYS */;
+INSERT INTO `sct_user_data` VALUES ('ADMIN','2K97yrBWdAordq/RTTAvkQ==','2014-05-27','2013-05-01','A'),('mohd','2K97yrBWdAordq/RTTAvkQ==','2014-05-27','2014-05-27','A'),('tede','25yoi6k0Fr809AWrZGJ/bQ==','2013-04-19','2013-05-27','A'),('toto','2K97yrBWdAordq/RTTAvkQ==','2015-05-01','2013-05-27','A');
+/*!40000 ALTER TABLE `sct_user_data` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sf_staff_attendance`
+--
+
+DROP TABLE IF EXISTS `sf_staff_attendance`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sf_staff_attendance` (
+  `STAFF_ID` varchar(25) NOT NULL,
+  `MACHINE_ID` varchar(10) DEFAULT NULL,
+  `SIGN_DATE_TIME` datetime NOT NULL,
+  KEY `FK_STAFF_idx` (`STAFF_ID`),
+  CONSTRAINT `FK_STAFF` FOREIGN KEY (`STAFF_ID`) REFERENCES `sf_staff_master` (`STAFF_IF`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sf_staff_attendance`
+--
+
+LOCK TABLES `sf_staff_attendance` WRITE;
+/*!40000 ALTER TABLE `sf_staff_attendance` DISABLE KEYS */;
+INSERT INTO `sf_staff_attendance` VALUES ('TR001','1','2013-04-30 08:30:00'),('TR001','1','2013-04-30 08:30:00'),('TR001','1','2013-04-30 08:30:00'),('TR001','1','2013-04-30 08:30:00'),('TR001','1','2013-04-29 08:33:00'),('TR001','1','2013-04-29 15:03:02'),('TR001','1','2013-04-28 09:15:01');
+/*!40000 ALTER TABLE `sf_staff_attendance` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sf_staff_master`
+--
+
+DROP TABLE IF EXISTS `sf_staff_master`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sf_staff_master` (
+  `STAFF_IF` varchar(25) NOT NULL,
+  `STAFF_FIRST_NAME` varchar(45) NOT NULL,
+  `STAFF_SUR_NAME` varchar(45) NOT NULL,
+  `STAFF_FAMILY_NAME` varchar(45) NOT NULL,
+  `STAFF_NATIONAL_ID` varchar(45) DEFAULT NULL,
+  `D_O_BIRTH` date DEFAULT NULL,
+  `HIRE_DATE` date DEFAULT NULL,
+  `CURRENT_TITLE` varchar(75) DEFAULT NULL,
+  `OFFICE_PHONE` varchar(15) DEFAULT NULL,
+  `MOBILE_PHONE` varchar(15) DEFAULT NULL,
+  `HOME_PHONE` varchar(15) DEFAULT NULL,
+  `HOME_ADDRESS` varchar(150) DEFAULT NULL,
+  `OFFICE_EMAIL` varchar(50) DEFAULT NULL,
+  `PERSONAL_EMAIL` varchar(50) DEFAULT NULL,
+  `STAFF_PHOTO_LOCATION` varchar(100) DEFAULT NULL,
+  `CURRENT_STATUS` varchar(10) DEFAULT NULL,
+  `CENTER_CODE` int(11) DEFAULT NULL,
+  PRIMARY KEY (`STAFF_IF`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sf_staff_master`
+--
+
+LOCK TABLES `sf_staff_master` WRITE;
+/*!40000 ALTER TABLE `sf_staff_master` DISABLE KEYS */;
+INSERT INTO `sf_staff_master` VALUES ('1122222','Şyıt','Ağyıüç','fhksdfhkdsfkh','21212121214','1989-10-12','2013-05-14','1','312313123','4656656','','ferrgfsfgdfgdgdf','werwr@fgff.fg','','11344173749.jpg','A',11),('12132','dfdsdfdsf','dfsdfsdfs','dfsfsdf','09876543211','1970-01-06','2013-05-29','2','23213123','32132131','3123123','fsdfsdssdfsdf','mohdjjdfjf@mo.com','mohdjjdfjf@mo.com.tr','11344113843.jpg','A',NULL),('122233','fsfsfdsfds','fsdsfsdfds','fdsfsdfdsfsf','34534534511','1979-08-21','2012-11-30','','3245432','321231231','312312312','fdsfsfsfdfsdf','mohd@gfd.com','','11353113816.jpg','',11),('12231321','fgdfgdfgdfg','gdfgfgdfg','gdfg','231313132','2013-05-20','2013-05-22','2','3123232312','12312312','','fsfadfsdadsdadf','wewwerwerwer','','null','A',NULL),('1232','fsfsfs','fdsfsdfs','sfdsfds','31312321','1990-05-08','2013-05-01','2','3213123','2313123','','313123132123','31232132','1232132132132','','A',NULL),('123213','fsdfsdfdsfsd','sdfsdfsdfsfds','fsdfdsfsd','21121212','2013-05-15','2013-05-20','2','2121212121','2131232','231232132','edfsffsffsdfsfsdfsdf','ddfsdfsfsfdsfsd','','null','A',NULL),('1234','hujujuj','hhyyhhy','hyhyhyh','34444333332','2013-05-21','2013-05-01','3','4554332','6654324','45434323','gytrfhgfdf','yhguujgu','fuhuu','null','A',NULL),('21312312','dfsddfsdf','fsdfdfs','fdsfsdfds','12345678901','2013-05-23','2013-05-29','2','32123123123','21321312','3123123','fdsfsfsdfsdfsd','fdsfsdfsdf','','null','A',NULL),('2131312','mohdsd','ddsd','dfsdfsdfsd','12345678900','2013-05-28','2013-05-15','3','212121212','2121212','21212121','dsfsdfsfdfsfdsf','12112121','','null','A',NULL),('213213','dfssdfdfs','fsdfsfsdf','fsdfsfsdf','3123123123','2013-05-22','2013-05-20','2','312312312','31231231231','','sdfdsfdfsdfsd','fdsfsdfdsfsd','','','',NULL),('213273','fdsfaefds','fsdfdsfdsf','fdsfdsfdsfs','23123132130','1970-05-13','2013-05-16','2','432434234','424324234','4324342','234rfdsarefsdfrfd','2131@fgf.vom','','null','A',NULL),('2212','ewarerew','rewrewrwe','rwrrwer','212121121','1980-02-05','2013-01-14','fsdd','fsfsdfdsfs','fsdfsdf','fsdfdf','fdsfsdfdfdsfdsfdsfsfdds','fdsfsdfdsfsdfds','','','',NULL),('231232','dsfjdsfgsdfgj','jdfsjfdsjh','fhsdjfsdhf','12331323212','1989-05-17','2013-05-08','3','32123213','321321321','','dsfdsfdsfsdf','dfdsfsdfsd@dffd.com','','null','A',NULL),('2313123','ffgfdgfdg','dgdgdfgf','gdffgd','312312312','1990-05-08','2013-05-08','2','3123123','31231313','','fsdfgfgdfgdfg','233123131312','','null','A',NULL),('2333212','fgsd2 fdfds fsdf','fdfsf dsfsdfsdfd ','fd sdf dfdsfsd f','3213123213','2013-05-22','2013-05-23','2','321321321312','3213123123','321321312','fsdfdsf dsff','ferewrwerwer','','null','A',NULL),('3123213','mkofdsfh','fdjfhds','fjdkjfkdfj','12345678910','2013-05-21','2013-05-22','2','12312321','3213323','312312312','fdsfds fdsfsdf sdf','qweqwe','','null','A',NULL),('312321312','Mohamed','ahmed','Fathy','89089090812','1970-03-18','2012-01-02','2','123343323','232322333','','Atasehir-Atay sokak','mohd@yahoo.com','','11350143133.jpg','A',11),('3213123','fsddfdsfdsfsdf','fdsfdsfdsfsdfs','gfgfgd','31241322354','1970-05-12','2013-05-01','2','32423432','4234234','4324234','fdsfd fdsf dsfsdf sdsfs','dsadsa@fdf.com','','1134210546.jpg','A',NULL),('34234324','ddfdffsdf','fdsfsdf','fdsffsdf','32123214345','1990-05-15','2013-05-22','2','3232133','1323123','2312323','fdsfdsfsdfdsfsdfdsf','dfdsf@fgd.com','','null','A',NULL),('eqwe','ewqeqwe','eqweqwe','ewqewqe','eqweweqwe','2013-05-22','2013-05-21','1','13213','213123123','312312','dafsddfsdfdfsdf','321321321332','','','',NULL),('TR001','Osman','Zeki','Yenilmez','23456789012','1989-03-27','2013-05-06','7','905556232633','905556232633','2134213','ljfkhgkhgvhg','a@b.com','','11350144412.jpg','A',12);
+/*!40000 ALTER TABLE `sf_staff_master` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `st_health_history`
+--
+
+DROP TABLE IF EXISTS `st_health_history`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `st_health_history` (
+  `PERSON_ID` int(11) NOT NULL,
+  `IS_STUDENT` int(11) NOT NULL,
+  `FILE_ID` varchar(60) NOT NULL,
+  PRIMARY KEY (`FILE_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `st_health_history`
+--
+
+LOCK TABLES `st_health_history` WRITE;
+/*!40000 ALTER TABLE `st_health_history` DISABLE KEYS */;
+INSERT INTO `st_health_history` VALUES (11,1,'11362111320HealthSt.PDF'),(4,1,'11364112116HealthSt.xlsx'),(5,1,'11364112221HealthSt.docx'),(15,1,'1136415213HealthSt.docx'),(15,1,'11365161938HealthSt.pdf');
+/*!40000 ALTER TABLE `st_health_history` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `st_student_attendance`
+--
+
+DROP TABLE IF EXISTS `st_student_attendance`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `st_student_attendance` (
+  `ST_STUDENT_ID` int(11) NOT NULL,
+  `CLASS_ID` int(11) NOT NULL,
+  `DATE_ENTRY` datetime NOT NULL,
+  PRIMARY KEY (`ST_STUDENT_ID`,`CLASS_ID`,`DATE_ENTRY`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `st_student_attendance`
+--
+
+LOCK TABLES `st_student_attendance` WRITE;
+/*!40000 ALTER TABLE `st_student_attendance` DISABLE KEYS */;
+/*!40000 ALTER TABLE `st_student_attendance` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `st_student_family`
+--
+
+DROP TABLE IF EXISTS `st_student_family`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `st_student_family` (
+  `STUDENT_FAMILY_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `TC_ID` varchar(11) DEFAULT NULL,
+  `MEMBER_NAME` varchar(45) DEFAULT NULL,
+  `MEMBER_SUR_NAME` varchar(45) DEFAULT NULL,
+  `GENDER` int(11) DEFAULT NULL,
+  `BIRTH_PLACE` varchar(45) DEFAULT NULL,
+  `BIRTH_DATE` date DEFAULT NULL,
+  `RELATION_STUDENT` int(11) DEFAULT NULL,
+  `BLOOD_GROUP` int(11) DEFAULT NULL,
+  `ADDRESS` varchar(100) DEFAULT NULL,
+  `CITY` int(11) DEFAULT NULL,
+  `TOWN` varchar(45) DEFAULT NULL,
+  `DISTRICT` varchar(45) DEFAULT NULL,
+  `MOBILE_PHONE` varchar(15) DEFAULT NULL,
+  `HOME_PHONE` varchar(15) DEFAULT NULL,
+  `WORK_PHONE` varchar(15) DEFAULT NULL,
+  `EMAIL` varchar(60) DEFAULT NULL,
+  `NOTES` varchar(100) DEFAULT NULL,
+  `MEMBER_PIC` varchar(65) DEFAULT NULL,
+  `ST_STUDENT_ID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`STUDENT_FAMILY_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `st_student_family`
+--
+
+LOCK TABLES `st_student_family` WRITE;
+/*!40000 ALTER TABLE `st_student_family` DISABLE KEYS */;
+INSERT INTO `st_student_family` VALUES (9,'123321311','nhvhh','dtggffgg',17,'gfgffff','2010-04-06',0,14,'yr464464',21,'hrrtt','trrttrtr','54334','543443435','45343554543345','453453345453345','hryryyryryr','1136516395FM.jpg',NULL),(10,'3213213','dfsfdsf','dfdfsdfsdf',18,'fsdfsdfsdfdsdf','2013-07-16',0,14,'fsdfsdfdsf',21,'fdsfdsfs','dfsfdfsd','4324324324','2134234','4324234','432423','',NULL,10),(11,'21213113123','Ali','Fathy',17,'Istanbul','1964-07-08',0,14,'Avcilar Cad',22,'Sisli','Taksim','3123213232323','2132342242','213232313213','mo@hhff.com','','11362111127FM.jpg',11),(19,'32222222222','soso','fsdfdsfsfs',18,'fsdfdsfdsf','1980-07-10',35,15,'dfafaff',22,'fdsfdsafasfs','dfdsafdsafsf','213123123','323423432432','231332323','dsd@ddfdf.com','','1136415821FM.jpg',15),(108,'23131231313','koky','dasdsadsa',18,'sadsadasd','1979-11-06',35,14,'sadasdsadad',22,'sadsadsad','dasdsadasd','3213123213','213213123','322131321','212@ddfd.cp','','11364151535FM.jpg',15);
+/*!40000 ALTER TABLE `st_student_family` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `st_student_master`
+--
+
+DROP TABLE IF EXISTS `st_student_master`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `st_student_master` (
+  `ST_STUDENT_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `EDUCATION_CENTER` int(11) DEFAULT NULL,
+  `JOIN_DATE` date DEFAULT NULL,
+  `CARD_ID` varchar(30) DEFAULT NULL,
+  `STUDENT_TYPE` int(11) DEFAULT NULL,
+  `TURKISH_ID` varchar(11) DEFAULT NULL,
+  `STUDENT_NAME` varchar(45) DEFAULT NULL,
+  `STUDENT_SUR_NAME` varchar(45) DEFAULT NULL,
+  `BIRTH_PLACE` varchar(45) DEFAULT NULL,
+  `BIRTH_DATE` date DEFAULT NULL,
+  `GENDER` int(11) DEFAULT NULL,
+  `BLOOD_GROUP` int(11) DEFAULT NULL,
+  `HOME_PHONE` varchar(15) DEFAULT NULL,
+  `ADDRESS` varchar(100) DEFAULT NULL,
+  `EMAIL` varchar(60) DEFAULT NULL,
+  `CITY` int(11) DEFAULT NULL,
+  `TOWN` varchar(45) DEFAULT NULL,
+  `DISTRICT` varchar(45) DEFAULT NULL,
+  `NOTES` varchar(100) DEFAULT NULL,
+  `MOBILE_PHONE` varchar(15) DEFAULT NULL,
+  `WORK_PHONE` varchar(15) DEFAULT NULL,
+  `JOB` int(11) DEFAULT NULL,
+  `ACCOMD_STATUS` int(11) DEFAULT NULL,
+  `BRTH_SSTR_NO` int(11) DEFAULT NULL,
+  `EDU_BRTH_NO` int(11) DEFAULT NULL,
+  `STUDENT_STATUS` int(11) DEFAULT NULL,
+  `STUDENT_PIC` varchar(60) DEFAULT NULL,
+  PRIMARY KEY (`ST_STUDENT_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `st_student_master`
+--
+
+LOCK TABLES `st_student_master` WRITE;
+/*!40000 ALTER TABLE `st_student_master` DISABLE KEYS */;
+INSERT INTO `st_student_master` VALUES (4,11,'2013-07-17','2123123123213',19,'12321131231','dfsdfsdfds','dasdadasdad','dfdasddad','1990-10-10',17,14,'34234234','dsdasdasdsadsadsad','m@ffd.ocm',21,'dadsadsadsad','hdhhdh','433242323423443','323432432432','3432423432',23,30,1,1,25,NULL),(5,11,'2013-07-17','2123123123213',19,'12321131322','dfsdfsdfds','dasdadasdad','dfdasddad','1950-03-22',17,14,'34234234','dsdasdasdsadsadsad','12@dffd.com',21,'dadsadsadsad','hdhhdh','433242323423443','323432432432','3432423432',23,30,1,1,25,'1136513643ST.jpg'),(6,11,'2013-07-30','32323123123',19,'23111111111','sdfsdfdsfdsf','fsfdsfdsfdsfsdfsdf','fsfsfdf','2013-07-16',17,14,'23131232','sdfdsfsdfdsfds svdvd','dfdsfd@dfd.com',21,'dsfdsfdf','fdsfdfs','','424324','24432423',24,30,1,1,25,NULL),(7,0,NULL,NULL,0,NULL,NULL,NULL,NULL,NULL,0,0,NULL,NULL,NULL,0,NULL,NULL,NULL,NULL,NULL,0,0,0,0,25,NULL),(8,11,'2013-07-23','43234424244',19,'422444355','monbvf','ggfdcvg','hthrhgd','2013-07-24',18,13,'3234224','bvrgbd hvdfhvg','gf@f.vgg',21,'dfsgeg','reetett','423423432','2423432','234443423',23,30,1,1,25,'11365162429ST.jpg'),(9,11,'2013-07-10','231223123',19,'32123123123','fsdfdsfsdf','fdsfsdfsdf','fdfsdfsdfsd','2013-07-03',17,14,'32423432423','fddsfdsfsdfdsfdsf','sadas!@fdsfsdf',21,'adfdsfdsfds','fdsfsdfdsfsdf','','4234234','3422343423',23,30,1,1,25,'11365164128ST.jpg'),(10,11,'2013-07-23','213123123213',19,'21312312312','dfdfsdfsdf','fdfsdfsdfdsf','dfdfsdfdsfsd','2013-07-24',18,13,'123123123','dfdsfdsfdsfsd','dfsd@fdfsd',21,'dfsdfdsf','sfdsfdsf','fdsfsdfdsfsd','234324324','32432424',23,31,1,1,25,'11365175412ST.jpg'),(11,11,'2012-09-12','12323213',19,'21321323243','Ahmet','Ali','Istanbul','2002-04-11',17,13,'2321123221313','Avcilar Cad,Sisli ','moh@hhf.com',22,'Sisli','Taksim','','2323232323232','2323223232',23,30,2,2,25,'1136211810ST.jpg'),(12,11,'2013-07-23','fddfddfdffd',20,'df323231312','gdfgdgd','gfdfgdfgffgdfg','fdgfgdfgfggd','2013-07-25',17,14,'34324324','fgdfgfdgdgfdgfdd','423424324',21,'dfggdgd','gfdgdgd','','42342423','424324324',23,28,1,0,25,NULL),(13,12,'2013-07-24','3423432432',20,'rr332432432','fdfsdfsfdf','fsdfdsfdsfsdfsd','fsdfdsfdf','2013-07-17',17,13,'21323232','dasdfsdfdsfds','dsfsdfsdf',21,'dfsdf','fsdfdsfs','','fsdfdsfdsf','fsdfsdfsd',23,27,0,0,25,NULL),(14,11,'2013-07-24','dfsdqwf342342343',20,'44432442334','dfdsfdsfs','fsdfdsfsdfdsfds','fdsfdfs','1990-03-16',17,14,'45455342','dfsfdsfdsfs','32423@ffd.com',22,'dsfdfsf','fdsfdf','','4324234','32432434',23,30,1,0,25,'11364153712ST.jpg'),(15,11,'2013-07-10','42345324354',19,'43246323554','Mohamed','Ahmed','fdsfdsfds','2005-09-07',17,14,'323434324','fgdfgfdgdfg','sdd@fdf.com',22,'Karakoy','Beyoglu','','43424234342','34244234',23,30,1,1,25,'113651070ST.jpg');
+/*!40000 ALTER TABLE `st_student_master` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `traffic_program`
+--
+
+DROP TABLE IF EXISTS `traffic_program`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `traffic_program` (
+  `PROGRAM_ID` int(11) NOT NULL,
+  `TRAFFIC_PROGRAM_DESC` varchar(45) DEFAULT NULL,
+  `APPLIED_FROM_DAY` int(11) DEFAULT NULL,
+  `APPLIED_TO_DAY` int(11) DEFAULT NULL,
+  `APPLIED_FROM_TIME_HR` int(11) DEFAULT NULL,
+  `APPLIED_TO_TIME_HR` int(11) DEFAULT NULL,
+  `APPLIED_FROM_TIME_MN` int(11) DEFAULT NULL,
+  `APPLIED_TO_TIME_MN` int(11) DEFAULT NULL,
+  `STAND_BY_SEC` int(11) DEFAULT '0',
+  PRIMARY KEY (`PROGRAM_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `traffic_program`
+--
+
+LOCK TABLES `traffic_program` WRITE;
+/*!40000 ALTER TABLE `traffic_program` DISABLE KEYS */;
+INSERT INTO `traffic_program` VALUES (1,'Basic',0,6,0,23,0,59,0),(2,'Vechile Approch (1)',0,31,0,23,0,59,0);
+/*!40000 ALTER TABLE `traffic_program` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `trf_program_detail`
+--
+
+DROP TABLE IF EXISTS `trf_program_detail`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `trf_program_detail` (
+  `PROGRAM_ID` int(11) NOT NULL,
+  `SEC_DURATION` int(11) NOT NULL,
+  `GROUP1_ACTION` varchar(45) DEFAULT NULL,
+  `GROUP2_ACTION` varchar(45) DEFAULT NULL,
+  `GROUP3_ACTION` varchar(45) DEFAULT NULL,
+  `GROUP4_ACTION` varchar(45) DEFAULT NULL,
+  `STEP_ID` int(11) NOT NULL DEFAULT '0',
+  `NEXT_STEP` int(11) DEFAULT '0',
+  `NEXT_PROGRAM` int(11) DEFAULT NULL,
+  PRIMARY KEY (`PROGRAM_ID`,`STEP_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `trf_program_detail`
+--
+
+LOCK TABLES `trf_program_detail` WRITE;
+/*!40000 ALTER TABLE `trf_program_detail` DISABLE KEYS */;
+INSERT INTO `trf_program_detail` VALUES (1,2,'YD','YD','YD','YD',1,2,1),(1,2,'GD','GD','GD','GD',2,3,1),(1,2,'RD','RD','RD','RD',3,5,1),(1,50,'R','G','G','R',5,6,1),(1,3,'R','Y','Y','R',6,7,1),(1,3,'R','R','R','R',7,8,1),(1,50,'G','R','R','G',8,9,1),(1,3,'Y','R','R','Y',9,5,1),(2,3,'Y','Y','Y','Y',1,2,2),(2,10,'G','R','R','G',2,3,2),(2,3,'Y','R','R','Y',3,5,1);
+/*!40000 ALTER TABLE `trf_program_detail` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `visitor_register`
+--
+
+DROP TABLE IF EXISTS `visitor_register`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `visitor_register` (
+  `idvisitor_register` int(11) NOT NULL AUTO_INCREMENT,
+  `visitor_name` varchar(45) DEFAULT NULL,
+  `visitor_sur_name` varchar(45) DEFAULT NULL,
+  `visitor_TC_id` varchar(11) DEFAULT NULL,
+  `visit_reason` int(11) DEFAULT NULL,
+  `visit_date` date DEFAULT NULL,
+  `visit_time_hr` int(11) DEFAULT NULL,
+  `visit_time_mn` int(11) DEFAULT NULL,
+  `notes` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`idvisitor_register`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `visitor_register`
+--
+
+LOCK TABLES `visitor_register` WRITE;
+/*!40000 ALTER TABLE `visitor_register` DISABLE KEYS */;
+INSERT INTO `visitor_register` VALUES (1,'Mohamed','Ahmed','12213213213',53,'2013-07-26',16,10,'dfasfdsfg fdsdsfdsf sdfsdfdsfs'),(2,'Ali','Ahmed','21321312312',54,'2013-07-09',8,30,'dfsf dsfsd fsdfsd'),(3,'Ali','Ahmed','23124242243',54,'2013-07-24',8,30,'dfsd  f sdfdsf'),(4,'Ahmed','Ali','23423432432',54,'2013-07-16',9,10,'df sdfdsfsd fdsfssf'),(5,'Abreek','Elshay','21132313123',53,'2013-07-31',10,31,'df dfdsf sdf sdf');
+/*!40000 ALTER TABLE `visitor_register` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2015-12-18 19:18:16
